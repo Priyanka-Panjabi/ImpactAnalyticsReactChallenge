@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import clsx from 'clsx';
-import {withStyles} from '@material-ui/core/styles';
 import {Drawer, CssBaseline, AppBar, Toolbar, List, Typography, Divider,
        IconButton, ListItem, ListItemIcon, ListItemText} from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -9,10 +8,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import HomeIcon from '@material-ui/icons/Home';
 import DoneOutlineIcon from '@material-ui/icons/DoneOutline';
 import ClearIcon from '@material-ui/icons/Clear';
-import SearchIcon from '@material-ui/icons/Search';
-import InputBase from '@material-ui/core/InputBase';
-import { fade } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
+import { fade , withStyles} from '@material-ui/core/styles';
 const drawerWidth = 240;
 const useStyles = theme => ({
   root: {
@@ -157,19 +153,6 @@ class MainDrawer extends React.Component {
               <Typography style={{fontSize:"16px"}} >
                 JOB PORTAL 
               </Typography>
-              {window.location.hash==="#/" && <div className={classes.search}>
-              <div className={classes.searchIcon}>
-                <SearchIcon />
-              </div>
-              <InputBase
-                placeholder="Search…"
-                classes={{
-                  root: classes.inputRoot,
-                  input: classes.inputInput,
-                }}
-                inputProps={{ 'aria-label': 'search' }}
-              />
-            </div>}
             </Toolbar>
           </AppBar>
           <Drawer
